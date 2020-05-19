@@ -1,7 +1,7 @@
 {
-    "name": "justpark/envoyer-deploy",
-    "description": "JustPark Envoyer Deploy Command",
-    "keywords": ["justpark", "envoyer", "envoyer.io", "deploy", "framework", "laravel"],
+    "name": "repat/envoyer-deploy",
+    "description": "JustPark's Envoyer Deploy Command updated for Laravel 5/6/7",
+    "keywords": ["justpark", "envoyer", "envoyer.io", "deploy", "framework", "laravel", "repat"],
     "license": "MIT",
     "type": "project",
     "homepage": "http://www.justpark.com",
@@ -12,13 +12,26 @@
             "homepage": "http://daylerees.com",
             "role":     "Developer"
         }
+        {
+            "name":     "repat",
+            "email":    "repat@repat.de",
+            "homepage": "http://repat.de",
+            "role":     "Developer"
+        }
     ],
     "require": {
-        "laravel/framework": "5.*"
+        "laravel/framework": "5.*|6.*|7.*"
     },
     "autoload": {
         "psr-4": {
             "JustPark\\Deploy\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JustPark\\Deploy\\ServiceProviders\\EnvoyerServiceProvider"
+            ]
         }
     }
 }

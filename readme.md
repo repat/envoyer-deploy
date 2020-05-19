@@ -10,6 +10,8 @@ Hi there!
 
 Are you looking for a simple way to deploy your [Envoyer.io](http://envoyer.io) project from the command line? So was I, until I found the Envoyer Deploy Command from [JustPark](http://justpark.com)!
 
+> ⚠️ Update May 2020: Forked and updated for Laravel 6 and 7 since [JustPark didn't seem interested anymore](https://twitter.com/repat123/status/1262336245977370625)
+
 With this Artisan command, deploying to Envoyer.io is as simple as 1...2... well... more like this:
 
     ➜ php artisan envoyer:deploy
@@ -32,10 +34,14 @@ First you'll need to install the [Composer package](https://packagist.org/packag
 Simply add the following to the `"require-dev"` section of your `composer.json` file, and `composer update`.
 
 ```json
-"justpark/envoyer-deploy": "~1.0"
+"repat/envoyer-deploy": "~1.0"
 ```
 
-Next, you'll need to add the `ServiceProvider` for this command to the `providers` array within your `config/app.php` file.
+Or simply execute:
+
+`composer require repat/envoyer-deploy --dev`
+
+If you're on Laravel < 5.5, you'll need to add the `ServiceProvider` for this command to the `providers` array within your `config/app.php` file. Newer versions make use of [Auto-Discovery](https://laravel-news.com/package-auto-discovery).
 
 ```php
 'providers' => [
@@ -65,7 +71,7 @@ Happy deploying!
 
 Love,
 
-JustPark.
+JustPark & repat
 
 ## Who are you?
 
@@ -76,6 +82,8 @@ We're huge fans of Laravel within the company, and we've even got Laravel evange
 If you're interested in working with us, why not check out our [jobs page](https://www.justpark.com/jobs/).
 
 ![Panda](http://i.imgur.com/HkoUPMk.jpg)
+
+[repat](https://repat.de) is an independent Laravel developer and consultant and just updated this for Laravel 6 and 7. All credit goes to the guys at JustPark.
 
 ## License
 
