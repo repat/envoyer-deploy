@@ -2,10 +2,10 @@
 
 namespace JustPark\Deploy\Commands;
 
-use InvalidArgumentException;
 use Illuminate\Console\Command;
-use Symfony\Component\Console\Input\InputOption;
 use Illuminate\Contracts\Config\Repository as Config;
+use InvalidArgumentException;
+use Symfony\Component\Console\Input\InputOption;
 
 class EnvoyerDeployCommand extends Command
 {
@@ -60,11 +60,21 @@ class EnvoyerDeployCommand extends Command
     }
 
     /**
-     * Execute the console command.
+     * Shim layer for Laravel < 5.5
      *
-     * @return mixed
+     * @return void
      */
     public function fire()
+    {
+        $this->handle();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return void
+     */
+    public function handle()
     {
         // Get the project to deploy.
         $project = $this->getProjectToDeploy();
@@ -81,7 +91,7 @@ class EnvoyerDeployCommand extends Command
     protected function getProjectToDeploy()
     {
         // Determine project to deploy.
-        if (!$project = $this->option('project')) {
+        if (! $project = $this->option('project')) {
             $project = $this->getDefaultProjectHook();
         }
 
@@ -111,7 +121,7 @@ class EnvoyerDeployCommand extends Command
     protected function triggerDeploy($project)
     {
         // Ensure we have a project hook.
-        if (!$project) {
+        if (! $project) {
             throw new InvalidArgumentException('Incorrect project hook.');
         }
 

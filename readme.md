@@ -34,7 +34,7 @@ First you'll need to install the [Composer package](https://packagist.org/packag
 Simply add the following to the `"require-dev"` section of your `composer.json` file, and `composer update`.
 
 ```json
-"repat/envoyer-deploy": "~1.0"
+"repat/envoyer-deploy": "^1.1.1"
 ```
 
 Or simply execute:
