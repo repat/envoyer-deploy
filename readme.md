@@ -10,7 +10,7 @@ Hi there!
 
 Are you looking for a simple way to deploy your [Envoyer.io](http://envoyer.io) project from the command line? So was I, until I found the Envoyer Deploy Command from [JustPark](http://justpark.com)!
 
-> ⚠️ Update May 2020: Forked and updated for Laravel 5.5+, 6 and 7
+> ⚠️ Update May 2020: Forked and updated for Laravel 5.5+, 6 , 7 and 8
 
 With this Artisan command, deploying to Envoyer.io is as simple as 1...2... well... more like this:
 

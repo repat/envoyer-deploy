@@ -1,6 +1,6 @@
 {
     "name": "repat/envoyer-deploy",
-    "description": "JustPark's Envoyer Deploy Command updated for Laravel 5/6/7",
+    "description": "JustPark's Envoyer Deploy Command updated for Laravel 5/6/7/8",
     "keywords": ["justpark", "envoyer", "envoyer.io", "deploy", "framework", "laravel", "repat"],
     "license": "MIT",
     "type": "project",
@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "5.*|6.*|7.*"
+        "laravel/framework": "5.*|6.*|7.*|8.*"
     },
     "autoload": {
         "psr-4": {
